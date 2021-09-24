@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 public class numaleatoriosunicos {
     static int cantNros = 1000;
+    
     public static void main(String[] args) {
         long inicio = System.nanoTime(); // Tomamos la hora del sistema en nanosegundos
         ArrayList nros = crearLista(cantNros);

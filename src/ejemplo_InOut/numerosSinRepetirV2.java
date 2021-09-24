@@ -4,7 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class numerosSinRepetirV2 {
-    final static int cantNumeros=100;
+    final static int cantNumeros=1000;
     final static int piso=1;
     final static int techo=1001;
     final static String NombreArchivo = "src/ejemplo_InOut/numerosSinRepetirV2.txt";
@@ -13,6 +13,7 @@ public class numerosSinRepetirV2 {
         int numeros[] = new int[techo];
         BufferedWriter buff = new BufferedWriter(new FileWriter(NombreArchivo));
         int num;
+        long inicio = System.nanoTime(); // Tomamos la hora del sistema en nanosegundos
         for (int i = 0; i < cantNumeros; i++) {
             boolean flag = true;
             while (flag) {
@@ -25,14 +26,16 @@ public class numerosSinRepetirV2 {
                 } 
             }
         }
+        long fin = System.nanoTime();
+        System.out.println("Se tardo: " + (fin - inicio) + " nanosegundos ");
         buff.close();
 
     }
     public static void main(String[] args) throws IOException {
-        long inicio = System.nanoTime(); // Tomamos la hora del sistema en nanosegundos
+        //long inicio = System.nanoTime(); // Tomamos la hora del sistema en nanosegundos
         generarArchivo();
-        long fin = System.nanoTime();
-        System.out.println("Se tardo: " + (fin - inicio) + " nanosegundos ");
+        //long fin = System.nanoTime();
+        //System.out.println("Se tardo: " + (fin - inicio) + " nanosegundos ");
 
     }
 }

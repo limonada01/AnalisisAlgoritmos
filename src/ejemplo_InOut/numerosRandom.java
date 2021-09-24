@@ -9,6 +9,9 @@ import java.text.DecimalFormat;
 public class numerosRandom {
     
     static final String NOMBRE_ARCHIVO = "src/ejemplo_InOut/numerosEj1-3.txt";
+    static final int cantNumeros=100;
+    static final double piso=-100;
+    static final double techo=100;
     
     public static void generador(int cantNumeros,double piso, double techo,BufferedWriter buff) throws IOException{
         double num;
@@ -16,7 +19,7 @@ public class numerosRandom {
         for(int i=0;i<cantNumeros;i++){
             num= piso+(Math.random()* (techo-piso));
             buff.write(formato.format(num) +"\n");
-            System.err.println(formato.format(num));
+            System.out.println(formato.format(num));
         }
     }
 
@@ -35,9 +38,7 @@ public class numerosRandom {
         }
     }
 
-    static final int cantNumeros=100;
-    static final double piso=-100;
-    static final double techo=100;
+    
     public static void main(String[] args) {
         generarArchivo();
         

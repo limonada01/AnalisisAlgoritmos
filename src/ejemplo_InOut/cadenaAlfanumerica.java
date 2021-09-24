@@ -10,6 +10,8 @@ public class cadenaAlfanumerica {
     static final int longitudCadenas= 10;
     static final int cantCadenas=20;
     static final String ArchivoSalida="src/ejemplo_InOut/salidaAlfanumericos.txt";
+    
+    
     public static void generarArchivo() throws IOException{
         BufferedWriter buff= new BufferedWriter(new FileWriter(ArchivoSalida));
         String cadena="";

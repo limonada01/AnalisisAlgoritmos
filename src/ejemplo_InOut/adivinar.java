@@ -10,10 +10,10 @@ public class adivinar {
         Scanner sc=new Scanner(System.in);
         int eleccion;
         while(!win){
-            {
+            
             System.out.println("ingrese un numero");
             eleccion=sc.nextInt();
-            }while(eleccion<piso && eleccion >techo);
+            
             if(eleccion==num){
                 win=true;
                 System.out.println("acertaste! congratulation");
